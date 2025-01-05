@@ -19,11 +19,37 @@
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
             margin: 0;
             font-size: 2.5rem;
+        }
+
+        .flag-banner {
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(to right, red, white, black, green);
+            animation: move-banner 5s linear infinite;
+        }
+
+        @keyframes move-banner {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        .hero-image {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         section {
@@ -41,13 +67,27 @@
             margin-bottom: 1.5rem;
         }
 
-        .hero-image {
-            width: 200px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .news-section {
+            padding: 2rem;
+            background: #e6e6e6;
+            text-align: left;
+        }
+
+        .news-section h2 {
+            color: #333;
+        }
+
+        .news-article {
+            margin-bottom: 1rem;
+        }
+
+        .news-article h3 {
+            margin: 0;
+            color: #006400;
+        }
+
+        .news-article p {
+            margin: 0.5rem 0;
         }
 
         footer {
@@ -55,9 +95,7 @@
             color: #fff;
             text-align: center;
             padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            position: relative;
         }
 
         footer p {
@@ -68,22 +106,36 @@
 </head>
 <body>
     <header>
+        <div class="flag-banner"></div>
         <h1>Palestine Peace</h1>
     </header>
 
-    <!-- Hero Image -->
     <section>
-        <img src="https://raw.githubusercontent.com/AliTaha23/palestine-peace/main/Palestine%20Peace.png
-">
+        <img src="https://raw.githubusercontent.com/AliTaha23/palestine-peace/main/Palestine%20Peace.png" alt="Palestine Peace Logo" class="hero-image">
     </section>
 
-    <!-- About Section -->
     <section>
         <h2>About the Token</h2>
         <p>Palestine Peace is a meme token created to unite people globally in support of the Palestinian cause. 
         Through this token, we aim to fight injustice and promote peace among all nations.</p>
 
         <p>We believe that the world is stronger when we work together to create a more just and peaceful future.</p>
+    </section>
+
+    <section class="news-section">
+        <h2>Latest News About Palestine</h2>
+        <div class="news-article">
+            <h3>Historic Peace Efforts Underway</h3>
+            <p>Global leaders are coming together to discuss long-term solutions for justice and peace in Palestine.</p>
+        </div>
+        <div class="news-article">
+            <h3>Community Projects in Gaza</h3>
+            <p>New initiatives are providing support and opportunities for families affected by the conflict.</p>
+        </div>
+        <div class="news-article">
+            <h3>International Support Rallies Grow</h3>
+            <p>Thousands join rallies worldwide advocating for justice and freedom in Palestine.</p>
+        </div>
     </section>
 
     <footer>
